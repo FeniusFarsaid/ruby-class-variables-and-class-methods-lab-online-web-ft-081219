@@ -1,11 +1,17 @@
 class Song 
   
   attr_accessor :name, :artist, :genre
+  
+#sets 3 attributes to the class Song.
 
   @@count = 0 
   
+#introduces the class variable @@count and sets it to 0.
+  
   @@artists = []
   @@genres = []
+  
+#Introduces the class variables @@artists and @@genres and sets them to empty arrays
   
   def initialize(name, artist, genre)
     @name = name
@@ -15,6 +21,8 @@ class Song
     @@genres << genre
     @@count += 1
   end 
+  
+#Initializes intances of Song with 3 delimeters. Sets the instance variables (@name, @artist, and @genre) to the method arguments. Shovels the argument artist into the @@artists array. Adds 1 to the count.
   
   def self.count 
      @@count
@@ -39,6 +47,8 @@ class Song
     end
     genre_count
   end
+  
+#
   
   def self.artist_count
     artist_count = {}
